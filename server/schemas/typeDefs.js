@@ -2,14 +2,15 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
     type Auth {
-        # token: String
-        # success: Boolean
-        # message: String
+        token: String
+        success: Boolean
+        message: String
     }
 
     type User {
-        # _id: ID
-        # username: String!
+        _id: ID
+        username: String!
+        admin: Boolean
     }
 
     # input HookQuestionFormat {
@@ -17,12 +18,12 @@ const typeDefs = gql`
     #     userId: ID 
     # }
 
-    type Query {
-        # me: User
-    }   
+    # type Query {
+    #     me: User
+    # }   
 
-    type Mutation {
+    # type Mutation {
 
-    }
+    # }
 `
 module.exports = typeDefs;
