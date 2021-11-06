@@ -1,0 +1,20 @@
+{
+  "name": "scramblerooski",
+  "version": "1.0.0",
+  "description": "an app to help my golf group see who's the best",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianCronin/scramblerooski.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianCronin/scramblerooski/issues"
+  },
+  "homepage": "https://github.com/AdrianCronin/scramblerooski#readme"
+}
