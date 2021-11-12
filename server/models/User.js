@@ -13,18 +13,28 @@ const userSchema = new Schema({
         required: [true, 'You need to provide a Password.'],
         minlength: [6, 'Password must be at least 6 characters'],
     },
+    handicap: {
+        type: Number,
+    },
+    rounds: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Round',
+    }],
+    bestScore: {
+        type: Number,
+    },
     admin: {
         type: Boolean,
         default: false
     }
 });
 
+// hash user password
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
         this.password = await bcrypt.hash(this.password, saltRounds);
     }
-
     next();
 });
 
