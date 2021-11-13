@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const round = require('./Round');
+
 const userSchema = new Schema({
     username: {
         type: String,
@@ -16,10 +18,9 @@ const userSchema = new Schema({
     handicap: {
         type: Number,
     },
-    rounds: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Round',
-    }],
+
+    rounds: [round],
+    
     bestScore: {
         type: Number,
     },
