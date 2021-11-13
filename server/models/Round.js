@@ -1,7 +1,7 @@
 const {Schema, model } = require('mongoose');
 
-const round = new Schema({
+const Round = new Schema({
     scores: [Number],
 });
 
-module.exports = round;
+module.exports = Round;

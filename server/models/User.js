@@ -11,7 +11,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: [true, 'You need to provide a Password.'],
-        minlength: [6, 'Password must be at least 6 characters'],
+        minlength: [8, 'Password must be at least 8 characters'],
     },
     handicap: {
         type: Number,
@@ -23,10 +23,6 @@ const userSchema = new Schema({
     bestScore: {
         type: Number,
     },
-    admin: {
-        type: Boolean,
-        default: false
-    }
 });
 
 // hash user password
