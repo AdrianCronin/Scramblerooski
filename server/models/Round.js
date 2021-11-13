@@ -6,6 +6,10 @@ const Round = new Schema({
         type: Date,
         default: Date.now,
     },
+    course: {
+        type: Schema.Types.ObjectId,
+        ref: 'Course',
+    },
 });
 
 module.exports = Round;
